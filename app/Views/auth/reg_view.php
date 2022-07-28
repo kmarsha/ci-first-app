@@ -27,7 +27,7 @@
               <h3 class="text-center">Registrasi</h3>
             </div>
             <div class="card-body">
-              <form action="/masuk" method="post">
+              <form action="<?= base_url() ?>/masuk" method="post">
                 <?= csrf_field(); ?>
 
                 <?php
@@ -56,7 +56,7 @@
                   <input type="password" class="form-control" name="password" id="password"  placeholder="Your password here...">
                 </div>
                 <div class="row justify-content-between" style="padding: 8px;">
-                    <a href="/login">
+                    <a href="<?= base_url() ?>/login">
                       <p class="m-2 btn btn-default">Login</p>
                     </a>
                     <button type="submit" class="btn btn-primary m-2">Submit</button>

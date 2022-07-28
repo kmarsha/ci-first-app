@@ -54,7 +54,7 @@
                               <a href="<?= base_url() ?>/product/<?= $product['product_id'] ?>/edit">
                                 <button class="btn btn-warning">Edit</button>
                               </a>
-                              <a href="<?= base_url() ?>/product/<?= $product['product_id'] ?>/delete">
+                              <a href="<?= base_url() ?>/product/<?= $product['product_id'] ?>/delete" onclick="return confirm('Hapus Product?')">
                                 <button class="btn btn-danger">Hapus</button>
                               </a>
                             </td>

@@ -86,7 +86,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form method="post" action="/employee/add">
+                <form method="post" action="<?= base_url() ?>/employee/add">
                     <div class="form-group">
                         <label for="nama" class="col-form-label">Nama Karyawan</label>
                         <input type="text" class="form-control" id="nama" name="nama">

@@ -43,11 +43,17 @@
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="far fa-user"></i>
         </a>
-        <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
-          <a href="<?= route_to('logout') ?>" class="dropdown-item">
-            Logout
-          </a>
-        </div>
+        <?php
+          if (session()->has('isLogin')) {
+            ?>
+              <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
+                <a href="<?= base_url() . route_to('logout') ?>" class="dropdown-item">
+                  Logout
+                </a>
+              </div>
+            <?php
+          }
+        ?>
       </li>
     </ul>
   </nav>

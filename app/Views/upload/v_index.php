@@ -49,7 +49,7 @@
                           ?>
                           <tr>
                             <td scope="row"><?= $no++ ?></td>
-                            <td><img src="<?= base_url() ?>/uploads/photo/<?= $file['name'] ?>" alt="Photo <?= $file['name'] ?>" width="150"></td>
+                            <td><img src="<?= base_url() ?>/img/uploads/<?= $file['name'] ?>" alt="Photo <?= $file['name'] ?>" width="150"></td>
                             <td><?= $file['name'] ?></td>
                             <td><?= $file['type'] ?></td>
                             <td class="row justify-content-around">

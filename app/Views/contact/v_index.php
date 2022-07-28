@@ -39,7 +39,7 @@
                       <th>Name</th>
                       <th>Email</th>
                       <th>Message</th>
-                      <th>Aksi</th>
+                      <!-- <th>Aksi</th> -->
                     </tr>
                   </thead>
                   <tbody>
@@ -52,14 +52,11 @@
                             <td><?= $contact['name'] ?></td>
                             <td><?= $contact['email'] ?></td>
                             <td><?= $contact['message'] ?></td>
-                            <td class="row justify-content-around">
-                              <a href="<?= base_url() ?>/contact/<?= $contact['id'] ?>/edit">
-                                <button class="btn btn-warning">Edit</button>
-                              </a>
+                            <!-- <td class="row justify-content-around">
                               <a href="<?= base_url() ?>/contact/<?= $contact['id'] ?>/delete">
                                 <button class="btn btn-danger">Hapus</button>
                               </a>
-                            </td>
+                            </td> -->
                           </tr>
                           <?php
                         }

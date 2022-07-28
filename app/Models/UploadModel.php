@@ -14,7 +14,7 @@ class UploadModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['name', 'type', 'created_at'];
+    protected $allowedFields    = ['name', 'type'];
 
     // Dates
     protected $useTimestamps = true;

@@ -30,9 +30,8 @@ class EmployeeController extends BaseController
         $model->saveKaryawan($data);
 
         session()->setFlashdata('success', 'Data berhasil ditambahkan');
-        echo '<script>
-                window.location="/employee"
-            </script>';
+        
+        return redirect('/employee');
     }
 
     public function edit($id)
@@ -47,9 +46,7 @@ class EmployeeController extends BaseController
 
             return view('layouts/v_wrapper', $data);
         } else {
-            echo '<script>
-                    window.location="/employee"
-                </script>';
+            return redirect('/employee');
         }
     }
 
@@ -66,9 +63,8 @@ class EmployeeController extends BaseController
         $model->editKaryawan($data, $id);
         
         session()->setFlashdata('success', 'Data berhasil diubah');
-        echo '<script>
-                window.location="/employee"
-            </script>';
+        
+        return redirect('/employee');
     }
 
     public function hapus($id)
@@ -80,14 +76,10 @@ class EmployeeController extends BaseController
             $model->hapusKaryawan($id);
 
             session()->setFlashdata('success', 'Data berhasil dihapus');
-            echo "<script>
-                window.location='/employee';
-            </script>";
+            
+            return redirect('/employee');
         } else {
-            echo '<script>
-                alert("Gagal Menghapus !, ID karyawan ' . $id . ' Tidak ditemukan");
-                window.location="/employee";
-            </script>';
+            return redirect('/employee')->with('error', "Gagal Hapus! ID Karyawan $id tidak ditemukan");
         }
     }
 }

@@ -28,7 +28,7 @@
               </div>
               <div class="card-body">
                 <div class="row justify-content-end">
-                  <a href="/student/create">
+                  <a href="<?= base_url() ?>/student/create">
                     <button class="btn btn-primary mb-2">+ New Students</button>
                   </a>
                 </div>
@@ -58,7 +58,7 @@
                               <a href="<?= base_url() ?>/student/<?= $student['username'] ?>/edit">
                                 <button class="btn btn-warning">Edit</button>
                               </a>
-                              <a href="<?= base_url() ?>/student/<?= $student['username'] ?>/delete">
+                              <a href="<?= base_url() ?>/student/<?= $student['username'] ?>/delete" onclick="return confirm('Hapus User Student')">
                                 <button class="btn btn-danger">Hapus</button>
                               </a>
                             </td>

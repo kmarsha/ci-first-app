@@ -27,7 +27,7 @@
                     <h4 class="card-title">Edit Data Vaksinasi Karyawan</h4>
                 </div>
                 <div class="card-body">
-                    <form method="post" action="/employee/update/<?= $employee->id ?>">
+                    <form method="post" action="<?= base_url() ?>/employee/update/<?= $employee->id ?>">
                         <?= csrf_field(); ?>
                         <div class="form-group">
                             <label for="">Nama Karyawan</label>

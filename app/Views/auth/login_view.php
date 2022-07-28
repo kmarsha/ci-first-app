@@ -27,7 +27,7 @@
               <h3 class="text-center">Login</h3>
             </div>
             <div class="card-body">
-              <form action="/login" method="post">
+              <form action="<?= base_url() ?>/login" method="post">
                 <?= csrf_field(); ?>
 
                 <?php
@@ -51,11 +51,11 @@
                   <input type="password" class="form-control" name="password" id="password"  placeholder="Your password here...">
                 </div>
                 <div class="mb-3">
-                  <label for="confirm-password" class="form-label">Password</label>
+                  <label for="confirm-password" class="form-label">Confirm Password</label>
                   <input type="password" class="form-control" name="confirm_password" id="confirm-password"  placeholder="Confirm Password...">
                 </div>
                 <div class="row justify-content-between" style="padding: 8px;">
-                    <a href="/masuk">
+                    <a href="<?= base_url() ?>/masuk">
                       <p class="m-2 btn btn-default">Masuk</p>
                     </a>
                     <button type="submit" class="btn btn-primary m-2">Submit</button>

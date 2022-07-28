@@ -14,7 +14,7 @@ class EmployeeModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['username', 'password', 'role'];
+    protected $allowedFields    = ['nama_karyawan', 'usia', 'status_vaksin_1', 'status_vaksin_2'];
 
     // Dates
     protected $useTimestamps = false;

@@ -91,8 +91,8 @@ $routes->group('', ['filter' => 'auth'], function($routes) {
 
     // $routes->resource('students', ['StudentController']);
 
-    // uploading image in folder uploads/photo (folder public)
-    $routes->get('/files', 'UploadController::index');
+    // uploading image in folder img/uploads (folder public)
+    $routes->get('/files', 'UploadController::index', ['as' => 'files']);
     $routes->get('/files/create', 'UploadController::create');
     $routes->post('/files', 'UploadController::store');
     $routes->get('/files/(.*)/download', 'UploadController::download/$1');
